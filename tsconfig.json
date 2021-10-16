@@ -24,6 +24,6 @@
   },
   "include": [
     "src",
-    "styled-components.d.ts"
+    "src/types/styled-components.d.ts"
   ]
 }
