@@ -6,9 +6,11 @@ import * as S from './styles';
 
 export type CardUserProps = {
   user: User;
+  onRepoClick?: (login: string) => void;
 };
 
-const CardUser = ({ user }: CardUserProps) => {
+const CardUser = ({ user, onRepoClick }: CardUserProps) => {
+  const handleClick = () => onRepoClick && onRepoClick(user.login);
   return (
     <S.Wrapper>
       <S.AvatarWrapper>
@@ -18,7 +20,7 @@ const CardUser = ({ user }: CardUserProps) => {
         <S.Title>{user.name}</S.Title>
         <S.Description>{user.bio}</S.Description>
         <S.ReposWrapper>
-          <S.ReposTitle>Repositorios</S.ReposTitle>
+          <S.ReposButton onClick={handleClick}>Ver repositórios</S.ReposButton>
           <S.ReposNumber>{user.reposNumber}</S.ReposNumber>
         </S.ReposWrapper>
       </S.ContentWrapper>

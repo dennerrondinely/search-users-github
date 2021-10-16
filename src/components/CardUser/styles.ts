@@ -24,6 +24,7 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   gap: 1rem;
+  width: calc(100% - 11rem);
 `;
 
 export const Title = styled.h2`
@@ -46,11 +47,12 @@ export const ReposWrapper = styled.div`
   align-items: center;
 `;
 
-export const ReposTitle = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const ReposButton = styled.button`
+  border: none;
+  cursor: pointer;
   ${({ theme }) => css`
     color: ${theme.colors.secondary};
+    background-color: ${theme.colors.transparent};
     font-size: ${theme.font.sizes.xsmall};
   `}
 `;

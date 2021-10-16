@@ -74,6 +74,10 @@ exports[`<TextField /> Renders with error 1`] = `
   font-size: 1.2rem;
 }
 
+.c0 {
+  width: 100%;
+}
+
 .c0 .c3 {
   border-color: #CB4C3D;
 }

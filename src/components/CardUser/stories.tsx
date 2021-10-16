@@ -7,7 +7,11 @@ import CardUser, { CardUserProps } from '.';
 
 export default {
   title: 'CardUser',
-  component: CardUser
+  component: CardUser,
+  argTypes: {
+    onRepoClick: { action: 'clicked' },
+    user: { type: '' }
+  }
 } as Meta;
 
 export const Default: Story<CardUserProps> = (args) => <CardUser {...args} />;

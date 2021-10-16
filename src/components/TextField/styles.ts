@@ -100,6 +100,7 @@ const wrapperModifiers = {
 };
 
 export const Wrapper = styled.div<WrapperProps>`
+  width: 100%;
   ${({ theme, error, disabled }) => css`
     ${error && wrapperModifiers.error(theme)}
     ${disabled && wrapperModifiers.disabled(theme)}
