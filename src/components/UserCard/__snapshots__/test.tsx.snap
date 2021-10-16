@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserCard /> should render a user card with his information 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+  max-width: 34rem;
+}
+
+.c1 {
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 9rem;
+  width: 9rem;
+}
+
+.c2 {
+  height: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  gap: 1rem;
+  width: calc(100% - 11rem);
+}
+
+.c4 {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.8rem;
+  color: #241911;
+}
+
+.c5 {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2rem;
+  color: #7c7570;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  border: none;
+  cursor: pointer;
+  color: #2B716E;
+  background-color: #0000;
+  font-size: 1.2rem;
+}
+
+.c8 {
+  min-width: 3rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 600;
+  line-height: 1.4rem;
+  border-radius: 1.4rem;
+  color: #2B716E;
+  font-size: 1.2rem;
+  border: 0.1rem dashed #e8efef;
+  padding: 0.4rem 0.8rem;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <img
+      alt="Dênner Rondinely"
+      class="c2"
+      src="https://avatars.githubusercontent.com/u/14242874?v=4"
+    />
+  </div>
+  <div
+    class="c3"
+  >
+    <h2
+      class="c4"
+      title="Dênner Rondinely"
+    >
+      Dênner Rondinely
+    </h2>
+    <span
+      class="c5"
+      title="Geek and JavaScript enthusiast 🕶"
+    >
+      Geek and JavaScript enthusiast 🕶
+    </span>
+    <div
+      class="c6"
+    >
+      <button
+        class="c7"
+      >
+        Ver repositórios
+      </button>
+      <span
+        class="c8"
+      >
+        39
+      </span>
+    </div>
+  </div>
+</div>
+`;

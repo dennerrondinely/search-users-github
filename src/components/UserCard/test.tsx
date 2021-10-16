@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from 'utils/tests/helpers';
+import { fireEvent, render, screen } from 'utils/tests/helpers';
 import user from 'mock/user';
 
 import UserCard from '.';
@@ -21,5 +21,13 @@ describe('<UserCard />', () => {
     expect(screen.getByText(user.reposNumber)).toBeInTheDocument();
 
     expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should return a user login', () => {
+    const onRepoClick = jest.fn();
+    render(<UserCard user={user} onRepoClick={onRepoClick} />);
+
+    fireEvent.click(screen.getByRole('button'));
+    expect(onRepoClick).toHaveBeenCalledWith(user.login);
   });
 });

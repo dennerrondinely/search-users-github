@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   gap: 2rem;
   position: relative;
   width: 100%;
-  max-width: 30rem;
+  max-width: 34rem;
 `;
 
 export const AvatarWrapper = styled.div`
@@ -28,6 +28,10 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Title = styled.h2`
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.large};
     color: ${theme.colors.primary};
@@ -35,21 +39,26 @@ export const Title = styled.h2`
 `;
 
 export const Description = styled.span`
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xsmall};
     color: ${theme.colors['primary-light']};
   `}
 `;
 
-export const ReposWrapper = styled.div`
+export const InfoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
-export const ReposButton = styled.button`
+export const LinkButton = styled.a`
   border: none;
   cursor: pointer;
+  text-decoration: none;
   ${({ theme }) => css`
     color: ${theme.colors.secondary};
     background-color: ${theme.colors.transparent};
@@ -57,8 +66,11 @@ export const ReposButton = styled.button`
   `}
 `;
 
-export const ReposNumber = styled.span`
+export const Stargazers = styled.span`
+  min-width: 3rem;
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
   line-height: 1.4rem;
   border-radius: 1.4rem;
@@ -68,5 +80,6 @@ export const ReposNumber = styled.span`
     font-size: ${theme.font.sizes.xsmall};
     border: 0.1rem dashed ${theme.colors['secondary-light']};
     padding: ${theme.spacings.minimal} ${theme.spacings.xxsmall};
+    gap: ${theme.spacings.minimal};
   `}
 `;

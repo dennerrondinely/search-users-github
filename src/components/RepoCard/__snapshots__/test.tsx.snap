@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<UserCard /> should render a user card with his information 1`] = `
+exports[`<RepoCard /> should render a card repo with his information 1`] = `
+.c9 {
+  height: 14px;
+  width: 14px;
+  height: 14px;
+  width: 14px;
+  stroke: #f9d671;
+  fill: #f9d671;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9,7 +18,7 @@ exports[`<UserCard /> should render a user card with his information 1`] = `
   gap: 2rem;
   position: relative;
   width: 100%;
-  max-width: 30rem;
+  max-width: 34rem;
 }
 
 .c1 {
@@ -40,11 +49,19 @@ exports[`<UserCard /> should render a user card with his information 1`] = `
 }
 
 .c4 {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 1.8rem;
   color: #241911;
 }
 
 .c5 {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 1.2rem;
   color: #7c7570;
 }
@@ -67,16 +84,27 @@ exports[`<UserCard /> should render a user card with his information 1`] = `
 .c7 {
   border: none;
   cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #2B716E;
   background-color: #0000;
   font-size: 1.2rem;
 }
 
 .c8 {
+  min-width: 3rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 600;
   line-height: 1.4rem;
   border-radius: 1.4rem;
@@ -84,6 +112,7 @@ exports[`<UserCard /> should render a user card with his information 1`] = `
   font-size: 1.2rem;
   border: 0.1rem dashed #e8efef;
   padding: 0.4rem 0.8rem;
+  gap: 0.4rem;
 }
 
 <div
@@ -93,9 +122,9 @@ exports[`<UserCard /> should render a user card with his information 1`] = `
     class="c1"
   >
     <img
-      alt="Dênner Rondinely"
+      alt="awesome-svg"
       class="c2"
-      src="https://avatars.githubusercontent.com/u/14242874?v=4"
+      src="https://avatars.githubusercontent.com/u/3991845?v=4"
     />
   </div>
   <div
@@ -103,26 +132,43 @@ exports[`<UserCard /> should render a user card with his information 1`] = `
   >
     <h2
       class="c4"
+      title="awesome-svg"
     >
-      Dênner Rondinely
+      awesome-svg
     </h2>
     <span
       class="c5"
+      title="A curated list of SVG."
     >
-      Geek and JavaScript enthusiast 🕶
+      A curated list of SVG.
     </span>
     <div
       class="c6"
     >
-      <button
+      <a
         class="c7"
+        href="https://github.com/willianjusten/awesome-svg"
+        target="_blank"
       >
-        Ver repositórios
-      </button>
+        Ver no github
+      </a>
       <span
         class="c8"
+        title="repo stars"
       >
-        39
+        4205
+        <svg
+          class="c9"
+          color="yellow"
+          size="14"
+          viewBox="0 0 16 15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.29915 11.9694L3.75063 14.3612L4.61937 9.29614L0.93811 5.70846L6.02378 4.96941L8.29915 0.361206L10.5738 4.96941L15.6595 5.70846L11.9789 9.29614L12.8484 14.3612L8.29915 11.9694Z"
+            stroke-width="0"
+          />
+        </svg>
       </span>
     </div>
   </div>

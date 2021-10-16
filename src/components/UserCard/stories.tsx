@@ -3,18 +3,18 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import user from 'mock/user';
 
-import CardUser, { CardUserProps } from '.';
+import UserCard, { UserCardProps } from '.';
 
 export default {
-  title: 'CardUser',
-  component: CardUser,
+  title: 'UserCard',
+  component: UserCard,
   argTypes: {
     onRepoClick: { action: 'clicked' },
     user: { type: '' }
   }
 } as Meta;
 
-export const Default: Story<CardUserProps> = (args) => <CardUser {...args} />;
+export const Default: Story<UserCardProps> = (args) => <UserCard {...args} />;
 
 Default.args = {
   user
