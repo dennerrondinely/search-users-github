@@ -1,3 +1,5 @@
+import { colors } from './colors';
+
 export const theme = {
   grid: {
     container: '114.4rem',
@@ -30,14 +32,7 @@ export const theme = {
       oblique: 'oblique'
     }
   },
-  colors: {
-    primary: '#241911',
-    secondary: '#2B716E',
-    white: '#ffffff',
-    black: '#000',
-    transparent: '#0000',
-    disable: '#A9A5A2'
-  },
+  colors,
   sizes: {
     small: '27.8rem',
     medium: '55.7rem',
