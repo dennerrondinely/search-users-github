@@ -4,14 +4,21 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     width: 100%;
     height: 100%;
-    max-width: 60rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding: ${theme.spacings.medium} ${theme.spacings.small};
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
     gap: ${theme.spacings.small};
   `}
 `;
 
-export const UserList = styled.ul``;
+export const Grid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  ${({ theme }) => css`
+    gap: ${theme.spacings.small};
+  `}
+`;
