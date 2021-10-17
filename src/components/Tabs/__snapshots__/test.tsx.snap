@@ -24,7 +24,7 @@ exports[`<Tabs /> should render the Tabs 1`] = `
   -ms-transform: translateY(0.1rem);
   transform: translateY(0.1rem);
   padding: 0.8rem 2.4rem;
-  color: #d3d1cf;
+  color: #A9A5A2;
   gap: 2.4rem;
 }
 

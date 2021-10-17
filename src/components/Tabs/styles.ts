@@ -25,7 +25,7 @@ export const HeaderItem = styled.li<HeaderItemProps>`
   transform: translateY(0.1rem);
   ${({ theme, active }) => css`
     padding: ${theme.spacings.xxsmall} ${theme.spacings.small};
-    color: ${active ? theme.colors.secondary : theme.colors['gray-bright']};
+    color: ${active ? theme.colors.secondary : theme.colors.disable};
     gap: ${theme.spacings.small};
 
     &::before {

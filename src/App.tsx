@@ -5,15 +5,18 @@ import Routes from 'routes';
 
 import GlobalStyles from 'styles/global';
 import { theme } from 'styles/theme';
+import SearchProvider from 'context/searchContext';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
-    </ThemeProvider>
+    <SearchProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </ThemeProvider>
+    </SearchProvider>
   );
 }
 
