@@ -1,7 +1,5 @@
-import { baseApiEndPoint } from 'env';
-
-export async function http<T>(endpoint: string): Promise<T> {
-  const response = await fetch(`${baseApiEndPoint}${endpoint}`);
+export async function http<T>(url: string, params = {}): Promise<T> {
+  const response = await fetch(url, params);
   const body = await response.json();
   return body;
 }

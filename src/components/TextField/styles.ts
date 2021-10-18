@@ -15,10 +15,6 @@ export const InputWrapper = styled.div`
     padding: 0 ${theme.spacings.xsmall};
     border: 0.2rem solid;
     border-color: ${theme.colors['gray-light']};
-
-    /* &:focus-within {
-      box-shadow: 0 0 0.5rem ${theme.colors.primary};
-    } */
   `}
 `;
 

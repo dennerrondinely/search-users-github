@@ -14,4 +14,8 @@ export const Wrapper = styled.div`
   `}
 `;
 
-export const UserList = styled.ul``;
+export const LoadingWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;

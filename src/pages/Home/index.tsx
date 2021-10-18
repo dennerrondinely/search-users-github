@@ -2,26 +2,41 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 
 import CardUser from 'components/UserCard';
+import NotFound from 'components/NotFound';
+
+import { useSearch } from 'context/searchContext';
+import { userMapper } from 'utils/mappers/userMapper';
+import api from 'services/api';
 
 import { User } from 'types/user';
-import api from 'services/api';
-import { userMapper } from 'utils/mappers/userMapper';
-import { useSearch } from 'context/searchContext';
 
 import * as S from './styles';
+import { ErrorMessage } from 'types/error';
+import Loading from 'components/Loading';
 
 const Home = () => {
   const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const { query } = useSearch();
   const { push } = useHistory();
 
   const handleGetUser = async (userLogin: string) => {
     try {
+      setLoading(true);
+      setError(false);
+      setUser(null);
       const resp = await api.getUser(userLogin);
-      const serializedUser = userMapper(resp);
-      setUser(serializedUser);
+      if (resp.message && resp.message === ErrorMessage.NOT_FOUND) {
+        setError(true);
+      } else {
+        const serializedUser = userMapper(resp);
+        setUser(serializedUser);
+      }
+      setLoading(false);
     } catch (error) {
-      console.log(error);
+      setLoading(false);
+      setError(true);
     }
   };
 
@@ -39,10 +54,20 @@ const Home = () => {
 
   return (
     <S.Wrapper>
-      {/* <TextField icon={<Icon icon="search" />} onKeyUp={handleGetUser} /> */}
-      <S.UserList>
-        {user && <CardUser user={user} onRepoClick={handleRedirectUser} />}
-      </S.UserList>
+      {loading && (
+        <S.LoadingWrapper>
+          <Loading loading={loading} size={60} />
+        </S.LoadingWrapper>
+      )}
+      {!loading && error && (
+        <NotFound title="Desculpe, nenhum resultado encontrado :(">
+          <p>O Usuário que você pesquisou</p>
+          <p>infelizmente não foi encontrado ou não existe.</p>
+        </NotFound>
+      )}
+      {!loading && !error && user && (
+        <CardUser user={user} onRepoClick={handleRedirectUser} />
+      )}
     </S.Wrapper>
   );
 };
