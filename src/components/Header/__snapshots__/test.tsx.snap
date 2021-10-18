@@ -103,6 +103,7 @@ exports[`<Header /> should render header 1`] = `
       </div>
       <input
         class="c5"
+        placeholder="Digite o nome de um usuário..."
         type="text"
         value=""
       />
@@ -214,6 +215,7 @@ exports[`<Header /> should to call onInputUser with typed text 1`] = `
       </div>
       <input
         class="c5"
+        placeholder="Digite o nome de um usuário..."
         type="text"
         value=""
       />

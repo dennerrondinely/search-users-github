@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { useParams } from 'react-router';
 
 import RepoCard from 'components/RepoCard';
-import NotFound from 'components/NotFound';
+import Message from 'components/Message';
 import Tabs, { TabPane } from 'components/Tabs';
 
 import { Repo } from 'types/repo';
@@ -92,25 +92,25 @@ const UserInfo = () => {
       {!loading && (
         <Tabs activeTab="Repos">
           <TabPane name="Repos" key={1}>
-            {reposError && <MessageDefault />}
-            {
+            {reposError && <MessageErro />}
+            {!reposError && !repos.length && <MessageEmpty />}
+            {!reposError && repos.length > 0 && (
               <S.Grid>
-                {!reposError &&
-                  repos.length > 0 &&
-                  repos.map((repo) => (
-                    <RepoCard
-                      repo={{
-                        ...repo,
-                        avatarUrl: defaultAvatar
-                      }}
-                      key={repo.name}
-                    />
-                  ))}
+                {repos.map((repo) => (
+                  <RepoCard
+                    repo={{
+                      ...repo,
+                      avatarUrl: defaultAvatar
+                    }}
+                    key={repo.name}
+                  />
+                ))}
               </S.Grid>
-            }
+            )}
           </TabPane>
           <TabPane name="Starred" key={1}>
-            {starredError && <MessageDefault />}
+            {starredError && <MessageErro />}
+            {!starredError && !starred.length && <MessageEmpty />}
             {!starredError && starred.length > 0 && (
               <S.Grid>
                 {starred.map((repo) => (
@@ -125,11 +125,17 @@ const UserInfo = () => {
   );
 };
 
-const MessageDefault = () => (
-  <NotFound title="Desculpe, nenhum resultado encontrado :(">
+const MessageErro = () => (
+  <Message title="Desculpe, nenhum resultado encontrado :(">
     <p>O Usuário que você pesquisou</p>
     <p>infelizmente não foi encontrado ou não existe.</p>
-  </NotFound>
+  </Message>
 );
 
+const MessageEmpty = () => (
+  <Message title="Desculpe, nenhum resultado encontrado :(">
+    <p>Os repositórios que você pesquisou</p>
+    <p>infelizmente não foram encontrados ou não existem.</p>
+  </Message>
+);
 export default UserInfo;

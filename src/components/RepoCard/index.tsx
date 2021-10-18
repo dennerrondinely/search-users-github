@@ -23,7 +23,7 @@ const RepoCard = ({ repo }: RepoCardProps) => {
           <S.LinkButton href={repo.url} target="_blank">
             Ver no github
           </S.LinkButton>
-          <S.Stargazers title="repo stars">
+          <S.Stargazers title="Número de estrelas">
             {repo.stargazers}
             <Icon icon="star" color="yellow" size={14} />
           </S.Stargazers>

@@ -81,5 +81,6 @@ export const ReposNumber = styled.span`
     font-size: ${theme.font.sizes.xsmall};
     border: 0.1rem dashed ${theme.colors['secondary-light']};
     padding: ${theme.spacings.minimal} ${theme.spacings.xxsmall};
+    gap: ${theme.spacings.minimal};
   `}
 `;
