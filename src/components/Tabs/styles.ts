@@ -15,8 +15,15 @@ export const Wrapper = styled.div`
 `;
 
 export const Header = styled.ul`
-  list-style: none;
-  display: flex;
+  ${({ theme }) => css`
+    list-style: none;
+    display: flex;
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 ${theme.spacings.small};
+    display: flex;
+  `}
 `;
 
 export const HeaderItem = styled.li<HeaderItemProps>`

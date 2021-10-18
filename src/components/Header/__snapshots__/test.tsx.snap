@@ -71,7 +71,7 @@ exports[`<Header /> should render header 1`] = `
   width: 100%;
   max-width: 60rem;
   margin: 0 auto;
-  padding: 3.2rem 2.4rem;
+  padding: 3.2rem 2.4rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -182,7 +182,7 @@ exports[`<Header /> should to call onInputUser with typed text 1`] = `
   width: 100%;
   max-width: 60rem;
   margin: 0 auto;
-  padding: 3.2rem 2.4rem;
+  padding: 3.2rem 2.4rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

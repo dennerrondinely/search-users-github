@@ -5,7 +5,7 @@ import TextField, { TextFieldProps } from '.';
 import Icon from 'components/Icon';
 
 export default {
-  title: 'Form/TextField',
+  title: 'TextField',
   component: TextField,
   args: {
     label: 'Buscar',

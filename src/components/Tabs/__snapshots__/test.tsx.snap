@@ -15,6 +15,14 @@ exports[`<Tabs /> should render the Tabs 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c2 {

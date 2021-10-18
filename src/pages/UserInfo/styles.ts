@@ -22,3 +22,9 @@ export const Grid = styled.div`
     gap: ${theme.spacings.small};
   `}
 `;
+
+export const LoadingWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;

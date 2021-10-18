@@ -5,7 +5,7 @@ export const Wrapper = styled.header`
     width: 100%;
     max-width: 60rem;
     margin: 0 auto;
-    padding: ${theme.spacings.medium} ${theme.spacings.small};
+    padding: ${theme.spacings.medium} ${theme.spacings.small} 0;
     display: flex;
   `}
 `;
