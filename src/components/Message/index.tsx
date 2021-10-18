@@ -2,12 +2,12 @@ import React, { ReactNode } from 'react';
 
 import * as S from './styles';
 
-export type NotFoundProps = {
+export type MessageProps = {
   title: string;
   children: ReactNode;
 };
 
-const NotFound = ({ title, children }: NotFoundProps) => {
+const Message = ({ title, children }: MessageProps) => {
   return (
     <S.Wrapper>
       <S.Title>{title}</S.Title>
@@ -16,4 +16,4 @@ const NotFound = ({ title, children }: NotFoundProps) => {
   );
 };
 
-export default NotFound;
+export default Message;

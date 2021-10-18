@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 
 import CardUser from 'components/UserCard';
-import NotFound from 'components/NotFound';
+import Message from 'components/Message';
 
 import { useSearch } from 'context/searchContext';
 import { userMapper } from 'utils/mappers/userMapper';
@@ -60,16 +60,16 @@ const Home = () => {
         </S.LoadingWrapper>
       )}
       {!loading && error && (
-        <NotFound title="Desculpe, nenhum resultado encontrado :(">
+        <Message title="Desculpe, nenhum resultado encontrado :(">
           <p>O Usuário que você pesquisou</p>
           <p>infelizmente não foi encontrado ou não existe.</p>
-        </NotFound>
+        </Message>
       )}
       {!loading && !error && !user && (
-        <NotFound title="Vamos começar?">
+        <Message title="Vamos começar?">
           <p>Digite o nome de um usuário e</p>
-          <p>em seguida pressione enter ou click no botão!</p>
-        </NotFound>
+          <p>em seguida pressione enter!</p>
+        </Message>
       )}
       {!loading && !error && user && (
         <CardUser user={user} onRepoClick={handleRedirectUser} />
