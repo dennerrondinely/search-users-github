@@ -96,7 +96,7 @@ const UserInfo = () => {
             {
               <S.Grid>
                 {!reposError &&
-                  repos.length &&
+                  repos.length > 0 &&
                   repos.map((repo) => (
                     <RepoCard
                       repo={{
@@ -111,7 +111,7 @@ const UserInfo = () => {
           </TabPane>
           <TabPane name="Starred" key={1}>
             {starredError && <MessageDefault />}
-            {!starredError && starred.length && (
+            {!starredError && starred.length > 0 && (
               <S.Grid>
                 {starred.map((repo) => (
                   <RepoCard repo={repo} key={repo.name} />
