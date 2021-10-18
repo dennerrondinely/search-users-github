@@ -4,11 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { register } from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
+
 register();
 reportWebVitals();
