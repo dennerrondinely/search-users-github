@@ -3,6 +3,10 @@
 
 Esse tem como objetivo facilitar a busca de usuários no github e listar seus repositórios seguindo os criterios selecionados pelo usuário.
 
+## 🎨 Layout
+
+Você pode utilizar a seguinte URL para visualizar o projeto em produção: [Visualizar](https://searchgithub.dennerrondinely.com.br/)
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
