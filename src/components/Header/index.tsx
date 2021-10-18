@@ -9,14 +9,18 @@ export type HeaderProps = {
   onInputUser?: (userLogin: string) => void;
 };
 
+//TODO: Encontrar alternativa para keyCode
+
 const Header = ({ onInputUser }: HeaderProps) => {
   const [text, setText] = useState('');
   const handleInputUser: KeyboardEventHandler<HTMLInputElement> = (event) => {
-    const { code, currentTarget } = event;
+    const { code, currentTarget, keyCode } = event;
     const { value } = currentTarget;
     const valueTrim = value.replace(/( )/g, '');
 
-    if (code === 'Enter' && valueTrim && onInputUser) {
+    console.log(event);
+
+    if ((code === 'Enter' || keyCode === 13) && valueTrim && onInputUser) {
       setText('');
       onInputUser(valueTrim);
     }
