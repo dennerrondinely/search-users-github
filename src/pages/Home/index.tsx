@@ -65,6 +65,12 @@ const Home = () => {
           <p>infelizmente não foi encontrado ou não existe.</p>
         </NotFound>
       )}
+      {!loading && !error && !user && (
+        <NotFound title="Vamos começar?">
+          <p>Digite o nome de um usuário e</p>
+          <p>em seguida pressione enter ou click no botão!</p>
+        </NotFound>
+      )}
       {!loading && !error && user && (
         <CardUser user={user} onRepoClick={handleRedirectUser} />
       )}
