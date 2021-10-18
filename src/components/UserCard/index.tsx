@@ -1,3 +1,4 @@
+import Icon from 'components/Icon';
 import React from 'react';
 
 import { User } from 'types/user';
@@ -21,7 +22,10 @@ const UserCard = ({ user, onRepoClick }: UserCardProps) => {
         <S.Description title={user.bio}>{user.bio}</S.Description>
         <S.ReposWrapper>
           <S.ReposButton onClick={handleClick}>Ver repositórios</S.ReposButton>
-          <S.ReposNumber>{user.reposNumber}</S.ReposNumber>
+          <S.ReposNumber title="Número de repositórios">
+            {user.reposNumber}
+            <Icon icon="octocat" color="black" size={16} />
+          </S.ReposNumber>
         </S.ReposWrapper>
       </S.ContentWrapper>
     </S.Wrapper>

@@ -154,7 +154,7 @@ exports[`<RepoCard /> should render a card repo with his information 1`] = `
       </a>
       <span
         class="c8"
-        title="repo stars"
+        title="Número de estrelas"
       >
         4205
         <svg

@@ -18,8 +18,6 @@ const Header = ({ onInputUser }: HeaderProps) => {
     const { value } = currentTarget;
     const valueTrim = value.replace(/( )/g, '');
 
-    console.log(event);
-
     if ((code === 'Enter' || keyCode === 13) && valueTrim && onInputUser) {
       setText('');
       onInputUser(valueTrim);
@@ -28,6 +26,7 @@ const Header = ({ onInputUser }: HeaderProps) => {
   return (
     <S.Wrapper>
       <TextField
+        placeholder="Digite o nome de um usuário..."
         value={text}
         onInputChange={setText}
         icon={<Icon icon="search" />}

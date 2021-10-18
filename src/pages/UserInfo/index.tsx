@@ -93,8 +93,8 @@ const UserInfo = () => {
         <Tabs activeTab="Repos">
           <TabPane name="Repos" key={1}>
             {reposError && <MessageErro />}
-
-            {!reposError && repos.length > 0 ? (
+            {!reposError && !repos.length && <MessageEmpty />}
+            {!reposError && repos.length > 0 && (
               <S.Grid>
                 {repos.map((repo) => (
                   <RepoCard
@@ -106,20 +106,17 @@ const UserInfo = () => {
                   />
                 ))}
               </S.Grid>
-            ) : (
-              <MessageEmpty />
             )}
           </TabPane>
           <TabPane name="Starred" key={1}>
             {starredError && <MessageErro />}
-            {!starredError && starred.length > 0 ? (
+            {!starredError && !starred.length && <MessageEmpty />}
+            {!starredError && starred.length > 0 && (
               <S.Grid>
                 {starred.map((repo) => (
                   <RepoCard repo={repo} key={repo.name} />
                 ))}
               </S.Grid>
-            ) : (
-              <MessageEmpty />
             )}
           </TabPane>
         </Tabs>
