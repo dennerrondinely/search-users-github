@@ -1,7 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/86be0c2a-b660-4ad8-baa4-cbecbf12a625/deploy-status)](https://app.netlify.com/sites/relaxed-brown-19fce8/deploys)
 ## 💻 Projeto
 
-Esse tem como objetivo facilitar a busca de usuários no github e listar seus repositórios seguindo os criterios selecionados pelo usuário.
+Esse projeto tem como objetivo facilitar a busca de usuários no github e listar seus repositórios seguindo os criterios selecionados pelo usuário.
 
 ## 🎨 Layout
 
